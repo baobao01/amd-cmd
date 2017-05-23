@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CMD</title>
+	<script src="../node_modules/seajs/dist/sea.js"></script>
+</head>
+<body>
+	<input class="btn" type="button" value="from module1">
+	<input class="btn" type="button" value="from module-main">
+	<input class="changecolor" type="button" value="changecolor">
+
+</body>
+<script>
+	seajs.config({   //配置文件路径，此路径为相对于js模块的路径
+		alias:{
+			jquery:"../../node_modules/jquery/dist/jquery.js"
+		}
+	})
+	seajs.use("./js/main.js",function(){ //调用主模块
+
+	})
+</script>
+</html>

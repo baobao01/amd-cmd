@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>amd</title>
+</head>
+<body>
+	<input class="btn" type="button" value="from module1">
+	<input class="btn" type="button" value="from module-main">
+	<input class="changecolor" type="button" value="changecolor">
+</body>
+<script data-main="./js/main" src="../node_modules/requirejs/require.js"> //引入requirejs，data-main为入口文件路径
+	requirejs.config({  //配置文件路径
+    //baseUrl: 'js/lib',
+    paths: {
+         jquery: '../../node_modules/jquery/dist/jquery.js'
+    }
+    requirejs(["main"],function(){
+		
+	})
+});
+		
+</script>
+
+</html>
